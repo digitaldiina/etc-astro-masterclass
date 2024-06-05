@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import PageEntry from '../../components/PageEntry.astro';
+const allLessons = await Astro.glob('./*.md');
+const pageTitle = "Astro Masterclass Lessons";
+---
+<BaseLayout pageTitle={pageTitle}>
+  <p>Lessons for ETC Astro masterclass.</p>
+  <!-- Manual list
+    <ul>
+    <li><a href="./lesson-1/">Lesson 1</a></li>
+    <li><a href="./lesson-2/">Lesson 2</a></li>
+    <li><a href="./lesson-3/">Lesson 3</a></li>
+  </ul>
+  -->
+  <!-- Generated list v1
+  {allLessons.map((lesson) => <li><a href={lesson.url}>{lesson.frontmatter.title}</a></li>)}
+  -->
+  <!-- Generated list v2 -->
+  {allLessons.map((lesson) => <PageEntry url={lesson.url} title={lesson.frontmatter.title} />)}
+</BaseLayout>

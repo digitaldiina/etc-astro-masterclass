@@ -1,7 +1,32 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My about page.</h2>
-</BaseLayout>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>About ETC</title>
+  </head>
+  <body>
+    <Header />
+    <h1>About Evolution of TC</h1>
+    <p>
+      Evolution of TC is the annual gathering event for all technical
+      communicators with a focus on innovations in software documentation. Here,
+      all professionals in the industry come together - technical writers,
+      information developers, technical editors and translators mainly with a
+      software background. It is the ideal platform to exchange knowledge and
+      grow your network.
+    </p>
+    <!-- <p><img src="../assets/etc-logo-2024.png" alt="ETC banner" /></p>-->
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>

@@ -1,7 +1,109 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Astro Masterclass";
+import BaseLayout from "../layouts/BaseLayout.astro";
+//import Footer from '../components/Footer.astro';
+//import Header from '../components/Header.astro';
+//import '../styles/global.css';
+
+import { Image } from "astro:assets";
+import etcImage from "../assets/etc-logo-2024.png";
+
+const pageTitle = "Master class";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My conference subtitle</h2>
+  <Image src={etcImage} alt="The ETC logo." />
+
+  <h2>ASTRO MASTERCLASS: CRAFTING SEAMLESS TECH DOCS WITH COSMIC PRECISION</h2>
+
+  <div>
+    <h3>CONTENTS</h3>
+    <p style="margin-bottom: 1rem;">
+      Want to propell your docs to new horizons? In this guided, hands-on
+      installation and setup session you will learn what Astro is and leave with
+      a running, customized website.
+    </p>
+
+    <p>
+      Astro is a fast, easy-to-use, all-in-one web framework, and it excells at
+      content-rich websites - which we need for software documentation.
+    </p>
+    <p>
+      Unravel the celestial mysteries that make Astro an indispensable force in
+      crafting seamless and impactful documentation.
+    </p>
+    <p>
+      Take a hands-on plunge into the installation and setup, unlocking the
+      potential of Astro to transform your documentation process.
+    </p>
+    <p>
+      Bring order to chaos with smart folder structures, and even smarter
+      content collections.
+    </p>
+    <p>
+      Join us in this cosmic exploration—crafting seamless tech documentation
+      has never been more empowering. Elevate your skills, embrace the tools at
+      your disposal, and become a true master of the Astro universe!
+    </p>
+  </div>
+
+  <div>
+    <h3>TAKEAWAYS</h3>
+    <p>
+      Understand the essence of Astro and its significance in elevating your
+      tech documentation Install and build your own site, ready to populate with
+      content
+    </p>
+  </div>
+  <div>
+    <h3>Requirements:</h3>
+
+    <ul>
+      <li>Laptop with wifi (user should be allowed to install software)</li>
+      <li>Node.js - v18.17.1 or v20.3.0 or higher (v19 is not supported)</li>
+      <li>
+        Text editor - I recommend Visual Studio Code with extension "Astro" by
+        astro-build
+      </li>
+      <li>Terminal / command line - I recommend Git Bash</li>
+    </ul>
+  </div>
+  <div>
+    <h3>PRIOR KNOWLEDGE</h3>
+    <p>Basic understanding of Markdown, HTML, and CSS</p>
+
+    <p>
+      To get the most out of the workshop and take part in the hands-on
+      sessions, bring a laptop with Visual Studio Code installed.
+    </p>
+  </div>
 </BaseLayout>
+
+<!--
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>ETC</title>
+  </head>
+  <body>
+    <Header />
+    <h1>Evolution of TC 2024</h1>
+    <p>
+      AT EVOLUTION OF TC, IT'S ALL ABOUT INNOVATIONS IN SOFTWARE DOCUMENTATION
+    </p>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+</style>
+ -->
