@@ -1,27 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "About";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Bergfrid's Astro demo site</title>
-	</head>
-	<body>
-		<Header />
-		<h1>About</h1>
-		<Footer />
-	</body>
-</html>
-
-<!-- <style>
-	h1 {
-	    color: purple;
-	    font-size: 4rem;
-	}
-</style> -->
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My about page.</h2>
+</BaseLayout>
