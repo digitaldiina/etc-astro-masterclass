@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageEntry from "../../components/PageEntry.astro";
+
+const pageTitle = "Documentation";
+const allDocs = await getCollection("docs");
+const concepts = await getCollection('docs', ({ id }) => {
+  return id.startsWith('concept');
+});
+---
+<BaseLayout pageTitle={pageTitle}>
+  <p>In minim minim amet commodo occaecat. Sunt laborum elit eu proident cillum. 
+    Aliqua id sit nisi et consequat est irure occaecat laborum deserunt in dolor sunt. 
+    Qui dolor mollit veniam veniam velit occaecat ullamco labore proident. 
+    Dolor et Lorem ex fugiat dolor sit anim reprehenderit aliqua.</p>
+  
+    <h2>All docs</h2>
+    <ul>
+    {
+      allDocs.map((doc) => (
+        <PageEntry url={`/docs/${doc.slug}/`} title={doc.data.title} />
+      ))
+    }
+  </ul>
+
+  <h2>Concepts only</h2>
+  <ul>
+    {
+      concepts.map((concept) => (
+        <PageEntry url={`/docs/${concept.slug}/`} title={concept.data.title} />
+      ))
+    }
+  </ul>
+
+</BaseLayout>
