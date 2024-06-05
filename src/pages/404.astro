@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import etcImage from "../assets/etc-logo-2024.png";
+
+const title = `Error 404`;
+---
+
+<BaseLayout title={{ title }}>
+  <section>
+    <div class="text-center">
+      <h1 class="text-white font-bold text-2xl">Whoops...</h1>
+    </div>
+    <img src={etcImage.src} alt="page not found" />
+  </section>
+  <div class="text-center">
+    <h2>Error 404</h2>
+  </div>
+  <p>Sorry, the page you requested was not found.</p>
+  <p>But don't worry, you can find plenty of other things on our homepage.</p>
+  <a rel="noopener noreferrer" href="/" class="btn ml-4">Back to homepage</a>
+</BaseLayout>
