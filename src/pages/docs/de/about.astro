@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const pageTitle = "About";
+
+// defaultLocale is "en"
+const aboutURL = getRelativeLocaleUrl("de", "about");
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Localized links</h2>
+  <a href="/get-started/">Herzlich willkommen!</a>
+  <a href={getRelativeLocaleUrl("de", "lessons")}>Lektionen</a>
+  <a href={aboutURL}>ETC</a>
+</BaseLayout>
